@@ -13,10 +13,8 @@
   <script>
     let canvas = document.querySelector('canvas')
     let context = canvas.getContext('2d')
-    context.fillStyle='white'
-
+    context.fillStyle='cyan'
     context.beginPath()
-    //context.rect(200,0,100,100)
     context.stroke()
     
     const num = [1,2,3,4,5]
@@ -30,24 +28,7 @@
     iposx = 5
     iposy = 5
     
-    for (let i = 0; i < num.length; i++) {
-      for (let j = 0; j < num.length; j++) {
-        context.beginPath()
-        posx = 100 + (width + gap) * i
-        posy = 100 + (width + gap) * j
-        context.rect(posx,posy,width, height)
-        context.stroke()
 
-        let ran = Math.random()
-        if( ran > 0.5 ){
-          context.beginPath()
-          context.fillRect(posx+iposx, posy+iposy, width-(iposx*2), height-(iposy*2))
-          context.fillStyle='red'
-          context.stroke()
-        }
-
-      }
-    }
 
 
   </script>
